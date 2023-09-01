@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="description" content="User Card">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=5.0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+
+  <title>User Card</title>
+  <script defer src="https://sweetalert.js.org/assets/sweetalert/sweetalert.min.js"></script>
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300'>
+
+  <!-- Estilos -->
+  <style>
+    @charset "utf-8";
+    /* CSS Document */
+
+    @import url(https://weloveiconfonts.com/api/?family=fontawesome);
+
+    @import url(https://meyerweb.com/eric/tools/css/reset/reset.css);
+
+    /* ---------- FUENTES ---------- */
+
+    [class*="fontawesome-"]:before {
+      font-family: 'FontAwesome', sans-serif;
+    }
+
+    /* ---------- GENERAL ---------- */
+
+    body {
+      background: #f4f4f4;
+      color: #5a5656;
+      font: 100%/1.5em 'Open Sans', sans-serif;
+      margin: 0;
+    }
+
+    .sombra {
+      opacity: 0.1;
+      border-radius: 100%;
+      box-shadow: 0px 0px 5px 2px rgba(42, 213, 243, 0.418), 0px 0px 5px 2px #01aaec3b;
+    }
+
+    .white-with-blue-shadow {
+      height: 25px;
+      text-shadow:
+        0 0 3px rgba(42, 213, 243, 0.418),
+        0 0 5px rgba(42, 213, 243, 0.418),
+        0 0 1px #01aaec3b;
+      color: rgba(42, 213, 243, 0.418);
+      border: solid;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      border-radius: 0px;
+      box-shadow: 0px 0px 5px 2px rgba(42, 213, 243, 0.418), 0px 0px 5px 2px #01aaec3b;
+
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    h1 {
+      font-size: 10px;
+    }
+
+    h1,
+    p {
+      margin-bottom: 25px;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+
+    .uppercase {
+      text-transform: uppercase;
+    }
+
+    /* ---------- Container ---------- */
+
+    #Container {
+      margin: 15% auto;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      width: 350px;
+      /*background: lightgray;*/
+      border: 0px solid #5a5656;
+      box-shadow: 0px 0px 5px 5px rgba(42, 213, 243, 0.418), 0px 0px 20px 5px #01aaec3b;
+      border-radius: 15px;
+      max-width: 357px;
+      padding: 12px;
+      height: 550px
+    }
+
+    form fieldset input[type="text"],
+    input[type="password"],
+    input[type="search"] {
+      background: #e5e5e5;
+      border: none;
+      border-radius: 15px;
+      color: #5a5656;
+      font-family: inherit;
+      font-size: 18px;
+      height: 30px;
+      outline: none;
+      padding: 0px 10px;
+      width: 350px;
+      box-shadow: 0px 0px 5px 5px rgba(42, 213, 243, 0.418), 0px 0px 20px 5px #01aaec3b;
+      -webkit-appearance: none;
+    }
+
+    form fieldset input[type="submit"] {
+      background-color: #008dde;
+      border-radius: 15px;
+      color: #f4f4f4;
+      cursor: pointer;
+      font-family: inherit;
+      height: 30px;
+      text-transform: uppercase;
+      width: 170px;
+      -webkit-appearance: none;
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+
+    form fieldset a {
+      color: #5a5656;
+      font-size: 10px;
+    }
+
+    form fieldset a:hover {
+      text-decoration: underline;
+    }
+
+    .btn-round {
+      background: #5a5656;
+      border-radius: 50%;
+      color: #f4f4f4;
+      display: block;
+      font-size: 12px;
+      height: 50px;
+      line-height: 50px;
+      margin: 30px 125px;
+      text-align: center;
+      text-transform: uppercase;
+      width: 50px;
+    }
+
+    .facebook-before {
+      background: #0064ab;
+      border-radius: 3px 0px 0px 3px;
+      color: #f4f4f4;
+      display: block;
+      float: left;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      width: 50px;
+    }
+
+    .facebook {
+      background: #0079ce;
+      border: none;
+      border-radius: 0px 3px 3px 0px;
+      color: #f4f4f4;
+      cursor: pointer;
+      height: 50px;
+      text-transform: uppercase;
+      width: 250px;
+    }
+
+    .twitter-before {
+      background: #189bcb;
+      border-radius: 3px 0px 0px 3px;
+      color: #f4f4f4;
+      display: block;
+      float: left;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      width: 50px;
+    }
+
+
+    .twitter {
+      background: #1bb2e9;
+      border: none;
+      border-radius: 0px 3px 3px 0px;
+      color: #f4f4f4;
+      cursor: pointer;
+      height: 50px;
+      text-transform: uppercase;
+      width: 350px;
+    }
+
+    .rotar {
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  </style>
+
+
+
+  <style>
+    /* $Base */
+
+    .loaders {
+      margin-top: 25px;
+      width: 350px;
+      height: 60px;
+      line-height: 80px;
+      /*background-color: #4EBA6F;*/
+    }
+
+    .loaders-bg-2 {
+      background-color: #2D95BF;
+    }
+
+    .loaders-bg-3 {
+      background-color: #F15A5A;
+    }
+
+    .loaders-bg-4 {
+      background-color: #955BA5;
+    }
+
+    .loader {
+      display: inline-block;
+      position: relative;
+      width: 30px;
+      height: 30px;
+      vertical-align: middle;
+    }
+
+    /*	$Loader Quadrant
+      ========================================================================== */
+    .loader-quart {
+      border-radius: 50px;
+      border: 6px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .loader-quart:after {
+      content: '';
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      bottom: -6px;
+      left: -6px;
+      border-radius: 50px;
+      border: 3px solid #cad5d5;
+      border-top-color: #578781;
+      -webkit-animation: spin 1s linear infinite;
+      animation: spin 1s linear infinite;
+    }
+
+    /*	$Loader Double circle
+      ========================================================================== */
+    .loader-double {
+      border-radius: 50px;
+      border: 6px solid transparent;
+      border-top-color: #fff;
+      border-bottom-color: #fff;
+      -webkit-animation: spin 1.5s linear infinite;
+      animation: spin 1.5s linear infinite;
+    }
+
+    .loader-double:before,
+    .loader-double:after {
+      content: '';
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      bottom: 5px;
+      left: 5px;
+      border-radius: 50px;
+      border: 6px solid transparent;
+      border-top-color: #fff;
+      border-bottom-color: #fff;
+      opacity: 0.6;
+      filter: alpha(opacity=60);
+      -webkit-animation: spinreverse 2s linear infinite;
+      animation: spinreverse 2s linear infinite;
+    }
+
+    .loader-double:before {
+      top: 15px;
+      left: 15px;
+      bottom: 15px;
+      right: 15px;
+      -webkit-animation: spinreverse 3s linear infinite;
+      animation: spinreverse 3s linear infinite;
+    }
+
+    /*	$Loader Multiple circle
+      ========================================================================== */
+    .loader-circles {
+      border-radius: 50px;
+      border: 3px solid transparent;
+      border-top-color: #fff;
+      -webkit-animation: spin 1s linear infinite;
+      animation: spin 1s linear infinite;
+    }
+
+    .loader-circles:before,
+    .loader-circles:after {
+      content: '';
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      bottom: 5px;
+      left: 5px;
+      border-radius: 50px;
+      border: 3px solid transparent;
+      border-top-color: #fff;
+      opacity: 0.8;
+      filter: alpha(opacity=80);
+      -webkit-animation: spinreverse 5s linear infinite;
+      animation: spinreverse 5s linear infinite;
+    }
+
+    .loader-circles:before {
+      top: 12px;
+      left: 12px;
+      bottom: 12px;
+      right: 12px;
+      -webkit-animation: spinreverse 10s linear infinite;
+      animation: spinreverse 10s linear infinite;
+    }
+
+    /*	$Loader Bars
+      ========================================================================== */
+    .loader-bars:before,
+    .loader-bars:after,
+    .loader-bars span {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 10px;
+      height: 30px;
+      background-color: #fff;
+      -webkit-animation: grow 1.5s linear infinite;
+      animation: grow 1.5s linear infinite;
+    }
+
+    .loader-bars:after {
+      left: 15px;
+      -webkit-animation: grow 1.5s linear -0.5s infinite;
+      animation: grow 1.5s linear -0.5s infinite;
+    }
+
+    .loader-bars span {
+      left: 30px;
+      -webkit-animation: grow 1.5s linear -1s infinite;
+      animation: grow 1.5s linear -1s infinite;
+    }
+
+    @-webkit-keyframes grow {
+      0% {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        opacity: 0;
+      }
+
+      50% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        opacity: 1;
+      }
+
+      100% {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        opacity: 0;
+      }
+    }
+
+    @keyframes grow {
+      0% {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        opacity: 0;
+      }
+
+      50% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        opacity: 1;
+      }
+
+      100% {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        opacity: 0;
+      }
+    }
+
+    @-webkit-keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+        tranform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        tranform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+        tranform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        tranform: rotate(360deg);
+      }
+    }
+
+    @-webkit-keyframes spinreverse {
+      0% {
+        -webkit-transform: rotate(0deg);
+        tranform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(-360deg);
+        tranform: rotate(-360deg);
+      }
+    }
+
+    @keyframes spinreverse {
+      0% {
+        -webkit-transform: rotate(0deg);
+        tranform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(-360deg);
+        tranform: rotate(-360deg);
+      }
+    }
+
+    /*center {
+      margin-top: 10%;
+    }*/
+
+
+    /* disable text selection */
+    html {
+      -webkit-touch-callout: none;
+      /* iOS Safari */
+      -webkit-user-select: none;
+      /* Safari */
+      -khtml-user-select: none;
+      /* Konqueror HTML */
+      -moz-user-select: none;
+      /* Old versions of Firefox */
+      -ms-user-select: none;
+      /* Internet Explorer/Edge */
+      user-select: none;
+      /* Non-prefixed version, currently
+                                      supported by Chrome, Edge, Opera and Firefox */
+    }
+
+    body {
+      background-color: #24292e !important;
+      color: white;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <div id="Container">
+    <center>
+      <!-- Search Input Lable -->
+      <span>
+        <label for="searchInput" style="float: left;padding-top: 5px; padding-bottom:15px;">
+
+        </label>
+        <p class="white-with-blue-shadow">User Card - v.0.1.0</p>
+        <!-- <script type="application/javascript">
+  function getIP(json) {
+    document.write("IP: ", json.ip);
+  }
+</script>
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script> -->
+
+
+        <!-- Form -->
+        <form action="javascript:void(0);" method="get">
+          <fieldset>
+
+            <!-- Search input -->
+            <input type="search" required id="searchInput" value="@Usuario o ID"
+              onBlur="if(this.value.trim()=='')this.value='@Usuario o ID'"
+              onFocus="if(this.value=='@Usuario o ID')this.value='' " class="">
+
+            <!-- Buttons -->
+            <div
+              style="display: grid; grid-template-columns: auto auto; grid-gap: 10px; padding-top: 20px; text-justify: center;">
+              <input type="submit" id="" onclick="get_user('lookup')" value="Buscar @" class="">
+              <input type="submit" id="" onclick="get_user('search')" value="Buscar por ID" class="">
+            </div>
+
+            <!-- Loader -->
+            <center class='center'>
+              <section id='loader' class="loaders">
+
+
+                <img width="300px" height="300px" class="sombra" src="img/iconX.png" alt="logo">
+
+
+
+              </section>
+
+              <p id="loader" class="buttonload"></p>
+
+            </center>
+
+
+          </fieldset>
+        </form>
+    </center>
+  </div>
+
+
+  <script>
+    function get_user(api_method) {
+      var searchInput = document.getElementById('searchInput').value;
+      if (searchInput != '@Usuario o ID' && searchInput != '')
+      {
+        document.getElementById('loader').innerHTML = '<span class="loader loader-quart"> </span>'
+        location.href = location.origin + (api_method == 'lookup' ? '/lookup/' : '/search/') + searchInput;
+      } else { swal('Oops, Algo salió mal!', 'Revisa que los datos sean correctos', 'error') }
+    }
+  </script>
+
+  <script>
+
+    document.addEventListener('contextmenu', event => event.preventDefault());
+  </script>
+
+  <footer>
+    <a href="https://twitter.com/zalatoy" target="_blank" ;>
+      <h1 style="text-align: center;text-decoration: none;color: white;"> © Zalatoy 2023</h1>
+    </a>
+  </footer>
+
+
+</body>
+
+</html>

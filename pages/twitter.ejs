@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>User Card</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700'>
+
+  <!-- Animacion.js -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+      <!-- Estilos CSS -->
+<style type="text/css">
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin-top: 20px;
+  height: auto;
+  background-color: #24292e;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #01AAEC ;
+  background: #e6ecf0 ;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  font-family: "Source Sans Pro", sans-serif;
+  
+}
+
+.profile {
+  width: 360px;
+  overflow: hidden;
+  border-radius: 40px;
+  box-shadow: 0px 0px 20px 6px rgba(42, 213, 243, 0.418), 0px 0px 20px 5px #01aaec3b
+}
+.profile section:nth-of-type(1) {
+  position: relative;
+}
+.profile section:nth-of-type(1):after {
+  content: "";
+  width: 100%;
+  height: 120px;
+  background-color: transparent;
+  background-image: -webkit-linear-gradient(top, transparent, black);
+  background-image: linear-gradient(to bottom,transparent, black);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.profile section:nth-of-type(1) img {
+  width: 100%;
+  height: auto;
+  border-radius: 99%;
+}
+.profile section:nth-of-type(1) .text {
+  font-family: 'Open Sans';
+  position: absolute;
+  text-decoration: none;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 10px;
+  text-align: center;
+  z-index: 2;
+  box-shadow: 0px 20px 20px 0px hsla(186, 100%, 2%, 0.418), 0px 20px 20px 0px #00000033
+}
+.profile section:nth-of-type(1) .text p {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-top: 0;
+  margin-bottom: 5px;
+  text-shadow: 0 0 8px #000000;
+}
+.profile section:nth-of-type(1) .text a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px #000000;
+}
+.profile section:nth-of-type(2) {
+  width: 100%;
+  background: #fff;
+  padding: 50px 20px 25px;
+  padding-top: 10px;
+  position: relative;
+}
+.profile section:nth-of-type(2) .info {
+  margin-bottom: 20px;
+  text-decoration: none;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.profile section:nth-of-type(2) .info div {
+  float: left;
+  width: 25%;
+  text-align: center;
+  
+}
+.profile section:nth-of-type(2) .info div span {
+  display: block;
+}
+.profile section:nth-of-type(2) .info div span:nth-of-type(3) {
+  color: #4d4d4d;
+  font-size: 22px;
+  font-weight: 800;
+  
+}
+.profile section:nth-of-type(2) .info div span:nth-of-type(2) {
+  color: #4099FF;
+  font-size: 16px;
+  font-weight: 800;
+ 
+}
+.profile section:nth-of-type(2) .info div span:nth-of-type(1) {
+  color: #8f0303;
+  font-size: 16px;
+  font-weight: 800;
+  padding: 2px;
+  
+}
+.profile section:nth-of-type(2) .button {
+  text-align: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.profile section:nth-of-type(2) .button a {
+  display: inline-block;
+  background: #4099FF;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 15px 50px 15px 90px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  -webkit-transition: background 0.4s ease-in-out;
+  -moz-transition: background 0.4s ease-in-out;
+  transition: background 0.4s ease-in-out;
+}
+.profile section:nth-of-type(2) .button a:hover {
+  background: #0d7eff;
+}
+.profile section:nth-of-type(2) .button a svg {
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  width: 40px;
+  height: 40px;
+}
+.profile section:nth-of-type(2) .button a svg path {
+  fill: #fff;
+}
+.profile section:nth-of-type(2) > svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  z-index: 0;
+  margin-top: -60%;
+  margin-left: -100%;
+}
+.profile section:nth-of-type(2) > svg path {
+  fill: #f7f7f7;
+}
+
+footer {
+  position: fixed;
+  right: 30px;
+  bottom: 40px;
+}
+footer a {
+  color: #fff;
+  font-size: 17px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-weight: 300;
+  display: inline-block;
+  border-bottom: 2px dotted #fff;
+  -webkit-transition: border-color 0.4s ease-in-out;
+  -moz-transition: border-color 0.4s ease-in-out;
+  transition: border-color 0.4s ease-in-out;
+}
+footer a:hover {
+  border-color: #0d7eff;
+}
+
+
+body {
+  background-color: #24292e !important;
+  color: white;
+}
+
+</style>
+  
+</head>
+
+<body>
+  
+  <!-- Inyección de los datos extraidos de la peticion a la API  -->
+  <div class="animated pulse profile">
+  <section>
+    <div style="height: 360px; width: 360px"><img src="<%= avatar %>" alt="Avatar de la cuenta" class="animated fadeIn"></div>
+    
+    <div class="text">
+     
+		<p><%= name %> 
+
+		<!-- Icono en caso de qie la cuenta este protegida -->
+		<% if (protegida) { %>
+      <svg version="1.1" id="Capa_1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="23.842px" height="29.13px" viewBox="476.078 626.935 19.842 26.13"
+	 style="enable-background:new 476.078 626.935 19.842 26.13;" xml:space="preserve">
+<g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)">
+	<path style="fill:#FF1100;stroke:#000000;stroke-width:0.1842;stroke-miterlimit:10;" d="M4855.954,6517.734
+		c-0.41-0.039-1.533-0.166-2.49-0.278c-18.486-2.065-34.697-12.817-43.799-29.077c-3.35-6.021-5.508-12.319-6.699-19.609l-0.4-2.578
+		l-0.117-33.154l-0.098-33.149l-6.895-0.098l-6.914-0.088v-58.745v-58.75h71.455h71.445v58.75v58.745l-6.992,0.088l-6.992,0.098
+		l-0.098,33.149l-0.117,33.154l-0.391,2.578c-1.973,12.261-7.266,22.939-15.566,31.523c-9.219,9.502-20.586,15.21-34.121,17.09
+		C4865.271,6517.661,4857.536,6517.9,4855.954,6517.734z M4864.743,6501.548c9.121-1.069,17.363-4.956,23.906-11.27
+		c2.48-2.412,3.945-4.126,5.723-6.797c3.379-4.976,5.547-10.537,6.641-16.924l0.391-2.397l0.059-32.173l0.078-32.197h-41.641
+		h-41.631l0.068,32.197l0.068,32.173l0.41,2.451c1.055,6.26,3.281,11.934,6.611,16.87c1.797,2.671,3.252,4.385,5.674,6.738
+		C4840.046,6498.853,4852.341,6503.003,4864.743,6501.548z"/>
+</g>
+</svg> <% } %>
+    <!-- Icono en caso de que la cuenta este verificada
+      (ACTUALMENTE EN DESAROLLO-->
+  <% if (verificada) { %>
+		<object type="image/svg+xml" data="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIgogICB2ZXJzaW9uPSIxLjEiCiAgIHdpZHRoPSIyMCIKICAgaGVpZ2h0PSIyMCI+CiAgPHBhdGggc3R5bGU9ImZpbGw6Izg4YzlmOTtmaWxsLW9wYWNpdHk6MSIgZD0ibSAxNC41NDM2LDE4LjA5MjQgYyAtMC4xNjA0NjcsMCAtMC4zODc4LC0wLjAzIC0wLjY4MiwtMC4wOSAtMC4yOTQyLC0wLjA2IC0wLjQ4ODEzMywtMC4xMTAyIC0wLjU4MTgsLTAuMTUwNiAtMC4zMzQyOCwwLjY2OTMzMyAtMC43ODg5NSwxLjE5NDc2NyAtMS4zNjQwMSwxLjU3NjMgLTAuNTc1MDYsMC4zODE1MzMgLTEuMjE2OTg3LDAuNTcyMyAtMS45MjU3OCwwLjU3MjMgLTAuNzA4NzkzMywwIC0xLjM2NzQzNjcsLTAuMjEwODMzIC0xLjk3NTkzLC0wLjYzMjUgLTAuNjA4NDkzMywtMC40MjE3MzMgLTEuMDMzMSwtMC45MjcxIC0xLjI3MzgyLC0xLjUxNjEgLTAuNDE0NTczMywwLjE2MDY2NyAtMC44NDI1MjMzLDAuMjQxIC0xLjI4Mzg1LDAuMjQxIC0xLjAwMzAwNjcsMCAtMS44NTg5MDY3LC0wLjM3ODIgLTIuNTY3NywtMS4xMzQ2IC0wLjcwODc5MzMsLTAuNzU2MzMzIC0xLjA1NjUwMzMsLTEuNjQ5OSAtMS4wNDMxMywtMi42ODA3IC0wLjAxMzQsLTAuMDQgLTAuMDEzNCwtMC4wODAxNyAwLC0wLjEyMDUgbCAwLC0wLjEyMDUgYyAtMC4wMTM0LC0wLjA0MDEzIC0wLjAxMzQsLTAuMDgwMjggMCwtMC4xMjA0NCAwLjAxMzQsLTAuMDQwMTMgMC4wMTM0LC0wLjA4MDI5IDAsLTAuMTIwNDggQyAxLjI3MDUyLDEzLjQyMDc0NyAwLjgxOTE2MzMzLDEyLjk0MjE2NyAwLjQ5MTUxLDEyLjM1OTg0IDAuMTYzODM2NjcsMTEuNzc3MjQgMCwxMS4xNDc5MjMgMCwxMC40NzE4OSAwLDkuNzk1ODUgMC4xNzcxOTY2Nyw5LjEzOTg5MzMgMC41MzE1OSw4LjUwNDAyIDAuODg1OTksNy44NjgxNCAxLjM5MDg0LDcuMzgyODYzMyAyLjA0NjE0LDcuMDQ4MTkgTCAxLjk2NTk0LDYuNzI2OTEgQyAxLjg4NTcsNi41MjYxMDMzIDEuODQ1NTgsNi4yOTg1MjY3IDEuODQ1NTgsNi4wNDQxOCAxLjgxODg0NjcsNS45MzcwOCAxLjgxODg0NjcsNS44MjMyOSAxLjg0NTU4LDUuNzAyODEgMS44MzIxOCw0LjY4NTQxIDIuMTczMjAzMywzLjc5NTE4MzMgMi44Njg2NSwzLjAzMjEzIDMuNTY0MDcsMi4yNjkwNzY3IDQuNDI2NjU2NywxLjg4NzU1IDUuNDU2NDEsMS44ODc1NSBjIDAuNDQxMzI2NywwIDAuODY5Mjc2NywwLjA4MDMyIDEuMjgzODUsMC4yNDA5NiBDIDYuOTk0MzUzMywxLjUyNjEwMzMgNy40MTU2MTY3LDEuMDIwNzUgOC4wMDQwNSwwLjYxMjQ1IDguNTkyNDU2NywwLjIwNDE1IDkuMjU0NDMsMCA5Ljk4OTk3LDAgYyAxLjQ3MTA4LDAgMi41Njc2OSwwLjcwOTUwMzMzIDMuMjg5ODMsMi4xMjg1MSAwLjM1NDQsLTAuMTYwNjQgMC43NzU2NjcsLTAuMjQwOTYgMS4yNjM4LC0wLjI0MDk2IDEuMDAzLDAgMS44NTU1NjcsMC4zNzQ4MzMzIDIuNTU3NywxLjEyNDUgMC43MDIxMzMsMC43NDk2NjY3IDEuMDY2NTY3LDEuNjQ2NTg2NyAxLjA5MzMsMi42OTA3NiAtMC4wMTMzMywwLjA4MDMyIC0wLjAyLDAuMTk0MTEgLTAuMDIsMC4zNDEzNyBsIC0wLjEyMDMsMC42ODI3MyBjIC0wLjAyNjY3LDAuMTIwNDggLTAuMDY2OCwwLjIyNzU3MzMgLTAuMTIwNCwwLjMyMTI4IDAuNjAxOCwwLjI4MTEyNjcgMS4wODk5MzMsMC43MTk1NDY3IDEuNDY0NCwxLjMxNTI2IDAuMzc0NDY3LDAuNTk1NzIgMC41NzUwNjcsMS4yOTUxODY3IDAuNjAxOCwyLjA5ODQgLTAuMDI2NjcsMC43NDk2NjcgLTAuMjA3MiwxLjQxOTAxIC0wLjU0MTYsMi4wMDgwMyAtMC4zMzQzMzMsMC41ODkwMiAtMC43NzU2NjcsMS4wMzA3ODcgLTEuMzI0LDEuMzI1MyAwLjAyNjY3LDAuMDUzNTMgMC4wNCwwLjA5MzY5IDAuMDQsMC4xMjA0OCBsIDAuMDIsMC4yNDA5NCBjIC0wLjAyNjY3LDAuMDQgLTAuMDI2NjcsMC4wODAxNyAwLDAuMTIwNSAtMC4wMjY2NywxLjA3MDkzMyAtMC4zOTQ0MzMsMS45NzQ1NjcgLTEuMTAzMywyLjcxMDkgLTAuNzA4OCwwLjczNjI2NyAtMS41NTgwMzMsMS4xMDQ0IC0yLjU0NzcsMS4xMDQ0Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6I2ZmZmZmZjtmaWxsLW9wYWNpdHk6MTsiIGQ9Ik0gMTMuMjU5OCw2LjU4NjM1IDguNDI1MjgsMTEuNDA1NjIgNi43NjAyOCw5LjcxODg4IEMgNi41MTk1Niw5LjUxODA3MzMgNi4yODIxOCw5LjQxNzY3IDYuMDQ4MTQsOS40MTc2NyA1LjgxNDEwNjcsOS40MTc2NyA1LjU2MzM1NjcsOS41MTgwNzMzIDUuMjk1ODksOS43MTg4OCA1LjA5NTI4MzMsMTAgNC45OTgzMjY3LDEwLjI3MTA4MyA1LjAwNTAyLDEwLjUzMjEzIGMgMC4wMDY2NywwLjI2MTA0IDAuMTEwMzEsMC40NzE4ODMgMC4zMTA5MywwLjYzMjUzIGwgMi4zODcxNiwyLjQwOTY0IGMgMC4yNDA3MiwwLjIwMDggMC41MDE1MDMzLDAuMzAxMiAwLjc4MjM1LDAuMzAxMiAwLjI4MDg0LDAgMC41MDE1LC0wLjEwMDQgMC42NjE5OCwtMC4zMDEyIGwgMC4wMjAxLDAgNS41MjQzNDEsLTUuNjY3NTM1MyBDIDE1LjE5OTY2Miw3LjM0NzgwNTYgMTQuODI3OTk1LDYuNzI1MjcxMSAxNC42NzQ5MzEsNi41Nzg3NTYzIDE0LjUyMTg2Nyw2LjQzMjI0MTUgMTMuODM1OTAxLDYuMDE0NzczMiAxMy4yNTk4LDYuNTg2MzUgeiIgLz4KPC9zdmc+"></object>
+		<% } %>
+		</p> 
+      <a href="https://twitter.com/<%= account %>" target="_blank"><strong>@<%= account %></strong></a>
+      <p></p>
+      <a><strong>ID: <%= user_id_str %></strong></a>
+    </div>
+  </section>
+  
+  <section>
+    <div class="info">
+      
+
+
+<!--<p style="color: black;text-align: center;margin-top: 5px;margin-bottom: 5px;"><script type="application/javascript">
+  function getIP(json) {
+    document.write("IP: ", json.ip);
+  }
+</script>
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>-->
+
+
+      <p style="color: black;text-align: center;margin-top: 5px;margin-bottom: 5px;"><strong>Fecha de creación de la cuenta</strong>
+      <p style="color: #ac0707;text-align: center;margin-top: 0px;margin-bottom: 5px;"><strong>🗓️ <%= joined %></strong>
+        <hr>
+      <p style="color: #141414; text-align: center;margin-top: 10px;margin-bottom: 10px;"><strong><a style= "text-decoration: none;text-decoration: none;color: black;" href="https://twitter.com/<%= account %>/lists/memberships" target="_blank";>🔎 Listas en las que está:   </a> 
+        <a style="color: #ac0707;">  <%= listed %></a></strong>
+        <hr>
+      <div>
+        <span>Tweets</span>
+        <span><%= tweets %></span>
+        <span><%= tweets_str %></span>
+      </div>
+      
+      <div>
+        <span>Siguiendo</span>
+        <span><%= following %></span>
+        <span><%= following_str %></span>
+      </div>
+      
+      <div>
+        <span>Seguidores</span>
+        <span><%= followers %></span>
+        <span><%= followers_str %></span>
+      </div>
+      
+      <div>
+        <span>Likes</span>
+        <span><%= likes %></span>
+        <span><%= likes_str %></span>
+      </div>
+
+    </div>
+    
+    <div class="button">
+      <a href="../">NUEVA BUSQUEDA
+    <!-- Icono nuevo de Twitter -->
+        <svg version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1200 1227" style="enable-background:new 0 0 1200 1227;" xml:space="preserve"><path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"/></svg>
+      </a>
+      <div>
+        <span>
+        <a class="twitter-timeline" data-width="360" data-height="500" href="https://twitter.com/<%= account %>?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="UTF-8"></script>
+
+        </span>
+      </div>
+    
+    </div>
+    
+    <!-- Icono viejo de Twitter -->
+    <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 400 400" style="enable-background:new 0 0 400 400;" xml:space="preserve"><path d="M153.6,301.6c94.3,0,145.9-78.2,145.9-145.9c0-2.2,0-4.4-0.1-6.6c10-7.2,18.7-16.3,25.6-26.6 c-9.2,4.1-19.1,6.8-29.5,8.1c10.6-6.3,18.7-16.4,22.6-28.4c-9.9,5.9-20.9,10.1-32.6,12.4c-9.4-10-22.7-16.2-37.4-16.2 c-28.3,0-51.3,23-51.3,51.3c0,4,0.5,7.9,1.3,11.7c-42.6-2.1-80.4-22.6-105.7-53.6c-4.4,7.6-6.9,16.4-6.9,25.8 c0,17.8,9.1,33.5,22.8,42.7c-8.4-0.3-16.3-2.6-23.2-6.4c0,0.2,0,0.4,0,0.7c0,24.8,17.7,45.6,41.1,50.3c-4.3,1.2-8.8,1.8-13.5,1.8 c-3.3,0-6.5-0.3-9.6-0.9c6.5,20.4,25.5,35.2,47.9,35.6c-17.6,13.8-39.7,22-63.7,22c-4.1,0-8.2-0.2-12.2-0.7 C97.7,293.1,124.7,301.6,153.6,301.6"/></svg> -->
+  </section>
+  
+
+
+<!-- <footer>
+  <a href="https://twitter.com/zalatoy" target="_blank">Design by zalatoy</a>
+</footer> -->
+  
+  
+</body>
+</html>
