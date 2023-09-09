@@ -139,8 +139,9 @@ function profile(req, res, method)
         // Recibe la solicitud
         request(options, function (error, response, body)
         {
-            console.log(response.statusCode)
-            console.log(body)
+            console.log('ID: ', body.id_str)
+            console.log('Código de estado = ', response.statusCode)
+
             // Si no hay error
             if (!error && response.statusCode == 200 && body[0]) {
 
